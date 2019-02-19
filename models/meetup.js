@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     title: {
       type: DataTypes.STRING,
       notEmpty: true
-    },  
+    },
     description: DataTypes.TEXT,
     sport: {
       type: DataTypes.STRING,
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL(8, 6),
       validate: {
         max: 85,
-        min:  -85.05115,
+        min: -85.05115,
         isDecimal: true
       }
     },
@@ -27,10 +27,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL(8, 6),
       validate: {
         max: 180,
-        min:  -180,
+        min: -180,
         isDecimal: true
       }
-    },
+    }
   });
   Meetup.associate = function(models) {
     Meetup.belongsTo(models.User, {

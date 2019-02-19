@@ -4,4 +4,3 @@ node_modules
 db/seed.sql
 db/schema.sql
 routes/apiRoutes.js
-public/js/test.js

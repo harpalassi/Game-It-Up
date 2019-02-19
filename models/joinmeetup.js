@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize) {
   var Joinmeetup = sequelize.define("Joinmeetup", {});
 
   Joinmeetup.associate = function(models) {
@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes) {
     Joinmeetup.belongsTo(models.User, {
       onDelete: "cascade"
     });
-    //User.hasMany(models.Users, { as: "Friend", through: "friends" });
   };
 
   return Joinmeetup;
